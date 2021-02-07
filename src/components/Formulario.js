@@ -10,7 +10,7 @@ const Formulario = () => {
     })
 
     const { categorias }=useContext(CategoriasContext);
-    const { buscarRecetas} = useContext(RecetasContext);
+    const { buscarRecetas ,  setConsultar} = useContext(RecetasContext);
 
     // funcion para leer los contenidos
 
@@ -29,6 +29,7 @@ const Formulario = () => {
                 e=>{
                     e.preventDefault();
                     buscarRecetas(busqueda);
+                    setConsultar(true);
                 }
             }
         >
